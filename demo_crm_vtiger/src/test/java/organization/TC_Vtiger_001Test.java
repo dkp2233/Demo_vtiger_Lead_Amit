@@ -16,24 +16,7 @@ public class TC_Vtiger_001Test {
 	@Test
 	public void loginToVtigerapplicationTest() {
 		
-		//capture the input data in run time via cmd line and use this data in script
-		String browser = System.getProperty("browser");
-		String url = System.getProperty("url");
-		String username = System.getProperty("username");
-		String password = System.getProperty("password");
-		
-		//choosing browser from user site 
-		if(browser.equals("chrome")) {
-			driver=new ChromeDriver();
-		}else if(browser.equals("edge")) {
-			driver=new EdgeDriver();
-		}else if(browser.equals("firefox")) {
-			driver=new FirefoxDriver();
-		}else {
-			driver=new EdgeDriver();
-		}
-		driver.get(url);
-		driver.manage().window().maximize();
+	
 		//give implicit time using reusable method because hardcoding is not allow in automation
 		WebDriverUtility wu=new WebDriverUtility();
 		wu.waitForPageToLoad(driver);
